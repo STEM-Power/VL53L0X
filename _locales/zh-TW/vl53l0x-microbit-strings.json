@@ -1,0 +1,7 @@
+{
+  "VL53L0X.init|block": "設定VL53L0X",
+  "VL53L0X.readSingleDistance|block": "距離（數字）",
+  "VL53L0X.stringDistance|block": "距離（字符）",
+  "VL53L0X|block": "VL53L0X",
+  "{id:category}VL53L0X": "VL53L0X"
+}
