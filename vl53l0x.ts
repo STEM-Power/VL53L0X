@@ -65,7 +65,7 @@ namespace VL53L0X {
         writeReg(register, data)
     }
     /**
-     * VL53L0X Initialize
+     * VL53L0X Initialize, reliable measurement range of this sensor is from 30mm to 1200mm
      */
     //% blockId="VL53L0X_INITIALIZE" block="init vl53l0x"
     export function init(): void {
@@ -335,7 +335,7 @@ namespace VL53L0X {
     }
 
     /**
-     * Read Distance
+     * Read distance between sensor and reflective plane in milli-meter(mm), the output of this block is a number
      */
     //% blockId="VL53L0X_DISTANCE" block="distance"
     export function readSingleDistance(): number {
@@ -369,6 +369,10 @@ namespace VL53L0X {
         writeReg(INTERRUPT_CLEAR, 0x01)
         return value
     }
+
+    /**
+    * Read distance between sensor and reflective plane in centimeter(cm), the output of this block is a string with 1 decimal place and unit
+    */
     //% blockId="STRING_DISTANCE" block="s_distance"
     export function stringDistance(): string {
         let d = readSingleDistance()
